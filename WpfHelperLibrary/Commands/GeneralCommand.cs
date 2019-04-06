@@ -7,7 +7,7 @@ namespace WpfHelperLibrary.Commands
 	/// <summary>
 	/// Command wich delegates the calls
 	/// </summary>
-	public class GeneralCommand : ICommand
+	public class GeneralCommand : BaseCommand
 	{
 		#region [ Fields ]
 
@@ -44,22 +44,12 @@ namespace WpfHelperLibrary.Commands
 
 		#region [ ICommand Members ]
 
-		/// <summary>
-		/// Wire up command to the Commandmanager
-		/// </summary>
-		public event EventHandler CanExecuteChanged
-		{
-			//This is done to wire up to the WPF command center
-			add { CommandManager.RequerySuggested += value; }
-			remove { CommandManager.RequerySuggested -= value; }
-		}
-
-		virtual public bool CanExecute(object parameter)
+		override public bool CanExecute(object parameter)
 		{
 			return canExecute(parameter);
 		}
 
-		virtual public void Execute(object parameter)
+		override public void Execute(object parameter)
 		{
 			execute(parameter);
 		}

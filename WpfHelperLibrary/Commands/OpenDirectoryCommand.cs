@@ -11,7 +11,7 @@ namespace WpfHelperLibrary.Commands
 	/// <remarks>
 	/// Only supports Windows Vista an onwards
 	/// </remarks>
-	public class OpenDirectoryCommand : ICommand
+	public class OpenDirectoryCommand : BaseCommand
 	{
 		public OpenDirectoryCommand()
 		{
@@ -34,7 +34,7 @@ namespace WpfHelperLibrary.Commands
 		}
 
 
-		void ICommand.Execute(object parameter)
+		public override void Execute(object parameter)
 			=> Execute(parameter as string);
 
 		/// <summary>
@@ -67,10 +67,9 @@ namespace WpfHelperLibrary.Commands
 				throw new InvalidOperationException("Only supported in Windows Vista an onwards");
 		}
 
-		public bool CanExecute(object parameter)
-		{
-			return true;
-		}
+		public override bool CanExecute(object parameter)
+			=> true;
+
 
 		private string selDirectory;
 
