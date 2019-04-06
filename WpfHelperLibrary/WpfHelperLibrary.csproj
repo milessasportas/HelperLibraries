@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\BaseCommand.cs" />
     <Compile Include="Commands\DirectoryNotSelectedException.cs" />
     <Compile Include="Commands\GeneralCommand.cs" />
     <Compile Include="Commands\OpenDirectoryCommand.cs" />
