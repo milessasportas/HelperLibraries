@@ -33,7 +33,10 @@ namespace WpfHelperLibrary.Commands
 			}
 		}
 
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="parameter"></param>
 		public override void Execute(object parameter)
 			=> Execute(parameter as string);
 
@@ -60,7 +63,7 @@ namespace WpfHelperLibrary.Commands
 				else
 				{
 					SelectedDirectory = null;
-					throw new DirectoryNotSelectedException();
+					throw new DirectoryNotSelectedException("User didn't select a directory.");
 				}
 			}
 			else
