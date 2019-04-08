@@ -18,7 +18,6 @@ namespace WpfHelperLibrary.Commands
 
 		}
 
-
 		/// <exception cref="DirectoryNotSelectedException"/>
 		public string Execute()
 		{
@@ -73,10 +72,7 @@ namespace WpfHelperLibrary.Commands
 		public override bool CanExecute(object parameter)
 			=> true;
 
-
 		private string selDirectory;
-
-		public event EventHandler CanExecuteChanged;
 
 		/// <summary>
 		/// Returns the Directory wich is selected

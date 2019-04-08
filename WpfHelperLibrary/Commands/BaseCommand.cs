@@ -6,7 +6,6 @@ namespace WpfHelperLibrary.Commands
 {
 	public abstract class BaseCommand : ICommand
 	{
-
 		/// <summary>
 		/// Wire up command to the Commandmanager
 		/// </summary>
