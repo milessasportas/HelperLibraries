@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseNotifyPropertyChanged.cs" />
     <Compile Include="Commands\BaseCommand.cs" />
     <Compile Include="Commands\DirectoryNotSelectedException.cs" />
     <Compile Include="Commands\GeneralCommand.cs" />
