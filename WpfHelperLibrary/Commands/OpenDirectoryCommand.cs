@@ -43,7 +43,7 @@ namespace WpfHelperLibrary.Commands
 		/// Displays the select folder Dialog to the user
 		/// </summary>
 		/// <exception cref="DirectoryNotSelectedException"/>
-		public void Execute(string startingDirectory)
+		public void Execute(string startingDirectory)   
 		{
 			//check if supported
 			if (CommonFileDialog.IsPlatformSupported)
@@ -78,7 +78,7 @@ namespace WpfHelperLibrary.Commands
 		/// Returns the Directory wich is selected
 		/// </summary>
 		/// <exception cref="DirectoryNotSelectedException"/>
-		public string SelectedDirectory
+		public virtual string SelectedDirectory
 		{
 			get
 			{
