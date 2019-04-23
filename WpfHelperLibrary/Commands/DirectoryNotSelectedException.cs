@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 namespace WpfHelperLibrary.Commands
 {
 	[Serializable]
-	internal class DirectoryNotSelectedException : Exception
+	public class DirectoryNotSelectedException : Exception
 	{
 		public DirectoryNotSelectedException()
 		{
