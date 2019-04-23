@@ -83,7 +83,7 @@ namespace WpfHelperLibrary.Commands
 			get
 			{
 				if (selDirectory == null)
-					throw new DirectoryNotSelectedException($"Directory not set, call  \"{nameof(Execute)}()\"");
+					throw new DirectoryNotSelectedException($"Directory not set, call \"{nameof(Execute)}()\"");
 
 				return selDirectory;
 			}
